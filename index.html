@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="dark light">
+<title>Set up Priya Key</title>
+<style>
+:root{--bg:#070d17;--panel:#0c1624;--line:#1d3550;--tx:#d7e3f0;--dim:#8da2b8;--cy:#2de2e6;--cy2:#13a8b8;--mg:#ff4fa3;--amb:#ffb02e;--ok:#4cd97b;--r:14px}
+@media (prefers-color-scheme:light){:root{--bg:#f3f7fb;--panel:#fff;--line:#c9d8e6;--tx:#14263a;--dim:#51657a;--cy:#007f8a;--cy2:#00606a;--mg:#c2185b;--amb:#9a5b00;--ok:#1b7f3a}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:0 max(16px,env(safe-area-inset-left)) 48px}
+main{max-width:760px;margin:0 auto}
+header{padding:28px 0 8px;display:flex;gap:14px;align-items:center}
+header img{width:56px;height:56px;border-radius:14px;flex:none}
+h1{font-size:1.5rem;margin:0;letter-spacing:.06em;font-weight:500}
+h2{font-size:1.15rem;margin:0 0 8px;font-weight:600}
+h3{font-size:1rem;margin:18px 0 6px;color:var(--cy)}
+p{margin:8px 0}.dim{color:var(--dim)}
+.lead{color:var(--dim);margin:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin:16px 0}
+.key{border-color:var(--mg)}.key b{color:var(--mg)}
+.choose{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.choose a{display:block;text-align:center;text-decoration:none;color:var(--tx);background:var(--panel);border:1px solid var(--cy2);border-radius:var(--r);padding:18px 8px;font-weight:600}
+.choose a small{display:block;color:var(--dim);font-weight:400}
+.choose a.rec{border-color:var(--cy);box-shadow:0 0 0 2px var(--cy) inset}
+.btn{display:inline-block;background:var(--cy);color:#00161a;text-decoration:none;font-weight:700;border-radius:12px;padding:13px 18px;margin:6px 0;min-height:44px}
+ol,ul{padding-left:1.3em;margin:8px 0}li{margin:7px 0}
+table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+code,.mono{font:13px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;word-break:break-all}
+pre{background:#0000001f;border:1px solid var(--line);border-radius:10px;padding:10px;overflow:auto;margin:8px 0}
+.warn{border:1px solid var(--amb);color:var(--amb);border-radius:10px;padding:10px 12px;margin:12px 0;font-size:.95rem}
+.warn b{color:inherit}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:1px 9px;font-size:.78rem;color:var(--dim)}
+footer{margin-top:30px;color:var(--dim);font-size:.85rem}
+summary{cursor:pointer;font-weight:600;padding:6px 0}
+@media (max-width:480px){.choose{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<header><img src="priya-key-icon.png" alt=""><div><h1>PRIYA KEY</h1><p class="lead">Set up your key in a few minutes</p></div></header>
+
+<div class="card key">
+<h2>Start here: the key cannot install the app by itself</h2>
+<p>Plugging the key in does <b>not</b> install anything. First open <b>this page on the computer or phone you will use</b>, install the app from it, and only then plug the key in. You approve every step; nothing installs by itself.</p>
+</div>
+
+<div class="choose" id="choose">
+<a href="#windows" id="pick-win">Windows PC<small>Windows 10 or 11, 64-bit</small></a>
+<a href="#android" id="pick-and">Android phone<small>Android 11 or newer</small></a>
+</div>
+
+<section class="card" id="windows">
+<h2>Windows <span class="tag">version 0.9.0-rc.3</span></h2>
+<p><a class="btn" href="https://github.com/Prajesh-S-K/priya-key-setup/releases/download/v0.9.0-rc.3/PriyaKey-Windows-Complete-0.9.0-rc.3.zip" download>Download the complete Windows package (208.5 MB)</a></p>
+<p class="dim">One ZIP with everything Windows needs: the installer, WinFsp and the offline Microsoft WebView2 runtime installer. Choose this if you are unsure, or if the PC is offline or runs Windows 10.</p>
+<p class="dim">Already on Windows 11 with a normal Microsoft Edge? The installer alone is smaller: <a href="https://github.com/Prajesh-S-K/priya-key-setup/releases/download/v0.9.0-rc.3/PriyaKey-Setup-0.9.0-rc.3.exe" download>installer only (2.1 MB)</a>. It includes WinFsp but needs the WebView2 runtime to be present already.</p>
+<ol>
+<li><b>Extract the ZIP first</b> (right-click ▸ <i>Extract All…</i>) — do not run the setup from inside the ZIP preview, because it must sit next to its <code>redist</code> folder. Then open <code>PriyaKey-Setup-0.9.0-rc.3.exe</code>.</li>
+<li>Windows asks for permission to make changes (administrator): choose <b>Yes</b>. The installer adds a small file-system driver called WinFsp (it shows your unlocked folders as a drive) and checks for the Microsoft WebView2 runtime that draws the window.</li>
+<li>If Windows says <b>“Windows protected your PC”</b> (the app is not commercially signed): choose <b>More info</b> and then <b>Run anyway</b> — but <b>only if the checksum below matches</b>.</li>
+<li>When the installer asks, <b>leave “Start with Windows” unticked</b> unless you want the key icon in the tray after login. A desktop shortcut is optional; the Start menu entry <b>Priya Key</b> is always there.</li>
+<li>Now plug the key into a USB port with a <b>data</b> cable. Windows may take a minute to set up the USB serial driver (it may use Windows Update).</li>
+<li>Open <b>Priya Key</b> from the Start menu. A short first-time check lists anything missing.</li>
+<li>Choose a four-digit PIN, press the <b>BOOT</b> button on the key when asked, and <b>write the recovery code on paper</b>. Keep it separate from the key.</li>
+</ol>
+<h3>Permissions and prompts on Windows</h3>
+<ul>
+<li><b>Administrator approval</b> — once, to install the program and WinFsp.</li>
+<li><b>The app itself never connects to the internet</b> and has no server. Installing the <b>complete package</b> needs nothing else to be downloaded. With <b>installer only</b>, a PC without the WebView2 runtime (some Windows 10 PCs) needs it from <a href="https://developer.microsoft.com/microsoft-edge/webview2/">Microsoft</a> first.</li>
+<li>The USB serial driver for the key is normally supplied by Windows itself (Windows Update may be used the first time). It is <b>not</b> in the package; if Windows cannot find it, see Troubleshooting.</li>
+</ul>
+</section>
+
+<section class="card" id="android">
+<h2>Android <span class="tag">version 0.9.0-rc.3</span></h2>
+<p><a class="btn" href="https://github.com/Prajesh-S-K/priya-key-setup/releases/download/v0.9.0-rc.3/PriyaKey-0.9.0-rc.3.apk" download>Download the Android app (7.9 MB)</a></p>
+<ol>
+<li>Open the downloaded file. Android will say it blocks installs from this source: choose <b>Settings</b> and allow <b>“Install unknown apps”</b> for the browser or Files app you used. You can turn it off again afterwards.</li>
+<li>Choose <b>Install</b>, then <b>Open</b>. The first-time check lists what is still needed.</li>
+<li>Plug the key in with a USB-C cable (or an OTG adapter) that carries <b>data</b>. Android asks <b>“Allow Priya Key to access the USB device?”</b> — choose <b>Allow</b>.</li>
+<li>Allow <b>notifications</b> when asked. Android requires a visible notice while the key stays connected; it has a <b>Lock all</b> button.</li>
+<li>Recommended: open <b>Battery</b> in the first-time check and allow <b>unrestricted</b> background use; some phones otherwise stop the connection when the screen is off, which locks your folders.</li>
+<li>Choose a four-digit PIN, press the <b>BOOT</b> button on the key when asked, and <b>write the recovery code on paper</b>.</li>
+</ol>
+<h3>Permissions on Android</h3>
+<ul>
+<li><b>USB device access</b> — only for the key.</li>
+<li><b>Notifications</b> and <b>foreground service</b> — to show that the key is connected.</li>
+<li><b>Folders</b> — the app only sees folders you pick with Android's own folder picker. It does not ask for contacts, location, camera, microphone or general storage access, and it has <b>no internet permission</b>.</li>
+</ul>
+<div class="warn"><b>Important:</b> encrypted folders on Android are stored inside the app. <b>Uninstalling the app or clearing its data permanently deletes them.</b> The recovery code cannot bring back a deleted vault file. Use <i>More ▸ Back up encrypted folder…</i> and keep the backups somewhere else. The app never deletes your original files by itself.</div>
+</section>
+
+<section class="card" id="verify">
+<h2>Check the files (optional but recommended)</h2>
+<p class="dim">Each file has a SHA-256 fingerprint. If yours differs, do not install it.</p>
+<table>
+<tr><th>File</th><th>SHA-256</th></tr>
+<tr><td>PriyaKey-Windows-Complete-0.9.0-rc.3.zip</td><td class="mono">1cc3e184ac344ec7eeac69b518d885932ee4484fbf19fb2a7f67230a1f67bbf5</td></tr>
+<tr><td>PriyaKey-Setup-0.9.0-rc.3.exe</td><td class="mono">8ca8f19db93b2fcdaa4abd938dd1272bb7fb42868e6741e552e05e4bfc89a0a2</td></tr>
+<tr><td>PriyaKey-0.9.0-rc.3.apk</td><td class="mono">500933cadd72211a16fdd52861a5040fb24f8472e0623cb71fdc083da4131af2</td></tr>
+</table>
+<h3>On Windows</h3>
+<pre>Get-FileHash .\PriyaKey-Windows-Complete-0.9.0-rc.3.zip -Algorithm SHA256</pre>
+<p class="dim">The ZIP also contains the Microsoft WebView2 installer (SHA-256 <span class="mono">0625fb5c1e75be58a164e14f95aa58a3e5badb859b3d17c952385f3e4a9ff3e8</span>) and WinFsp 2.1 (<span class="mono">073a70e00f77423e34bed98b86e600def93393ba5822204fac57a29324db9f7a</span>), unmodified.</p>
+<h3>On a Mac or Linux</h3>
+<pre>shasum -a 256 PriyaKey-0.9.0-rc.3.apk</pre>
+<h3>Android app signature</h3>
+<p>The app is signed with the project's own key (not the Play Store). Its certificate fingerprint (SHA-256):</p>
+<p class="mono">2e090673aef1e8ef9d44d9b431abcf14f13550e4f722b9513f4ff27534653a45</p>
+<p class="dim">Checking a fingerprint on a phone is awkward. The easiest way is to download the file on a computer, compare the fingerprint above, and copy it to the phone. Advanced: <code>apksigner verify --print-certs PriyaKey-0.9.0-rc.3.apk</code>.</p>
+</section>
+
+<section class="card" id="after">
+<h2>After setup</h2>
+<ul>
+<li><b>Discreet mode</b> (Settings, off by default): when the key is unplugged everything locks and the app closes its window (and its tray icon on Windows). It is <b>not invisibility</b> — the app remains in your installed apps and the key remains visible to the system as a USB device. Plugging the key back in, or opening the app yourself, always asks for the PIN again. On Android the app is designed to be started by the USB prompt when the key is plugged in, but <b>that relaunch is still pending verification on a real phone</b> — open the app by hand if it does not appear.</li>
+<li><b>Opening the app by hand</b> always works: Windows Start menu ▸ Priya Key; Android app drawer ▸ Priya Key.</li>
+<li><b>Privacy button:</b> press BOOT once to lock everything at once; press it again to bring the key back, then enter the PIN.</li>
+</ul>
+<details><summary>Troubleshooting</summary>
+<ul>
+<li><b>“Plug in the key”</b> stays on screen: try another cable (many only charge) or port.</li>
+<li><b>Windows: no drive appears</b> after unlocking — run the installer again (it reinstalls WinFsp if missing).</li>
+<li><b>Android: no USB prompt</b> — unplug and replug, open the app, and use the first-time check ▸ “Ask now”.</li>
+<li><b>Wrong PIN</b> too often: the key makes you wait (5 seconds, then longer). That is by design.</li>
+</ul></details>
+</section>
+
+<footer>Priya Key 0.9.0-rc.3 (release candidate; testing on real devices is still pending). Files on this page were built together and are listed in <a href="https://github.com/Prajesh-S-K/priya-key-setup/releases/download/v0.9.0-rc.3/SHA256SUMS.txt">SHA256SUMS.txt</a>.<br>Free software under the GPL: <a href="source/priya-key-source-0.9.0-rc.3.tar.gz">source code</a> · <a href="notices/COPYING-GPL-3.0.txt">GPL-3.0 text</a> · <a href="notices/LICENSE.txt">licence note</a> · <a href="notices/THIRD_PARTY_NOTICES.txt">third-party notices</a> (includes WinFsp and the unmodified Microsoft WebView2 installer).</footer>
+</main>
+<script>
+(function(){var ua=navigator.userAgent||"",a=document.getElementById('pick-and'),w=document.getElementById('pick-win');
+if(/Android/i.test(ua))a.className='rec';else if(/Windows/i.test(ua))w.className='rec';})();
+</script>
+</body>
+</html>

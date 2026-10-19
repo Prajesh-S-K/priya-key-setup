@@ -1,0 +1,3 @@
+Gift Key is distributed under the GNU General Public License, version 3 or later, because the Windows application
+links the WinFsp bindings (winfsp-rs, GPL-3.0) and uses WinFsp under its GPLv3 terms. Full text: https://www.gnu.org/licenses/gpl-3.0.txt
+Third-party components keep their own licenses (MIT/Apache-2.0 crates, Noise-c MIT, ESP-IDF Apache-2.0).
